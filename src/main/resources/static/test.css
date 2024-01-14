@@ -1,0 +1,13 @@
+tbody > tr:first-child
+{
+    color: red;
+    font-weight: bolder;
+}
+tbody > tr:first-child > td:last-child
+{
+    display: none;
+}
+table, th, td
+{
+    border: 1px solid black;
+}

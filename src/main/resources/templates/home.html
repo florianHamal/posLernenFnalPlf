@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <table>
+        <tr th:each="i : ${allLocations}">
+            <td th:text="${i.name}"></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr th:each="i : ${cars}">
+            <td th:text="${i.name}"></td>
+            <td th:text="${i.brand}"></td>
+            <td th:text="${i.location.name}"></td>
+            <td>
+                <form method="post" th:action="@{delete}">
+                    <input type="hidden"  name="name" th:value="${i.name}">
+                    <input type="submit" value="delete">
+                </form>
+            </td>
+        </tr>
+    </table>
+
+    <form th:object="${locationSelection}" method="post" th:action="@{filter}">
+        <li th:each="i : ${allLocations}">
+            <input type="radio" th:value="${i.name}" th:field="*{location}">
+            <label th:text="${i.name}"></label>
+        </li>
+        <input type="submit" value="submit">
+    </form>
+
+
+</body>
+</html>
