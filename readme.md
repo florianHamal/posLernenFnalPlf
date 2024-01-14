@@ -22,28 +22,28 @@ fetch = FetchType.EAGER
 
 repository:
 
-```
+```java
 interface CarRepository extends JpaRepository<Object,PkeyType>
 ```
 
 <h3>Spring</h3>
 /{location}
 
-```
+```java
 @PathVariable String location
 ```
 
 
 <h3>Jackson</h3>
 
-```
+```java
 @ManagedReferance  -> cascade all
 @JsonBackReference
 ```
 
-```
-.readerForListOf.read()
-.writeValue()
+```java
+objectmapper.readerForListOf.read();
+objectmapper.writeValue();
 ```
 
 <h3>Thymeleaf</h3>
