@@ -1,35 +1,50 @@
 
-this is a test project with some notes for personal use
-
+this is a test project with undlean code !!! 
+the notes are just some things i have a hard time keeping in my mind
 
 <h3>JPA</h3>
 object:
-@Entity
 
+```java
+@Entity
+```
+subobjects
+```java
 @ManyToOne <- car.location
 @Joincolum
 @OneToMany <- location.cars
-
 @Enumerate
+```
+for json reading:
+```
 fetch = FetchType.EAGER
-
+```
 
 repository:
+
+```
 interface CarRepository extends JpaRepository<Object,PkeyType>
+```
 
 <h3>Spring</h3>
 /{location}
-@PathVariable String location
 
+```
+@PathVariable String location
+```
 
 
 <h3>Jackson</h3>
+
+```
 @ManagedReferance  -> cascade all
 @JsonBackReference
+```
 
+```
 .readerForListOf.read()
 .writeValue()
-
+```
 
 <h3>Thymeleaf</h3>
 resources/templates folder
@@ -60,6 +75,7 @@ Model model
 
 <h3>CSS</h3>
 /static
+
 ```css
 tbody > tr:first-child
 {
